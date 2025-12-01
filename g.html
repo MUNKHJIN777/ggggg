@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hamgiin baga ni</h1>
+    <input type="text" id="a">
+    <input type="text" id="b">
+    <input type="text" id="c">
+    <input type="text" id="d">
+    <button onclick="lmin()">Dar</button>
+
+    <h1>anhni tooyu</h1>
+    <input type="text" id="p">
+    <button onclick="prime()">DAR</button>
+
+<script>
+
+function lmin() {
+    let a = document.getElementById("a").value;
+    let b = document.getElementById("b").value;
+    let c = document.getElementById("c").value;
+    let d = document.getElementById("d").value;
+
+  
+    if (a === "" || b === "" || c === "" || d === "") {
+        alert("4 too oruul");
+        return;
+    }
+
+
+    let min = Math.min(a, b, c, d);
+    alert(min);
+}
+function prime() {
+    let num = document.getElementById("p").value;
+
+    if (num === "") {
+        alert("Too oruul");
+        return;
+    }
+    if (num < 2) {
+        alert("FALSE");
+        return;
+    }
+
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) {
+            alert("FALSE");
+            return;
+        }
+    }
+
+    alert("TRUE");
+}
+</script>
+</body>
+</html>
